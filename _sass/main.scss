@@ -1,14 +1,61 @@
-h1{
-	color: green;
+$font-stack: 'Encode Sans Condensed', sans-serif;
+$primary-color: #F7F5F0;
+$back-color: #52361E;
+$lightback-color: #F1E7D1;
+
+body {
+  font: 100% $font-stack;
 }
 
-a active, visited {
-	text-decoration: none;
-	color: lightblue;
+.cinque-sensi-logo{
+	background-color: $back-color;
+	border-bottom: $primary-color;
+}
+
+.logo-img{
+	margin: 1.5em auto;
+}
+
+
+.bg-custom{
+	background-color: $back-color;
+	color: $primary-color;
+}
+
+.navbar-toggler-icon {
+	border-color: $primary-color;
+	color: $primary-color;
+}
+
+.nav-link nav-item{
+	color: $primary-color;
+	&:hover{
+		background-color: $primary-color;
+		color: $back-color;
+	}
+}
+
+.spot_5sensi{
+	background-color: $primary-color;
+	margin-top: 1.5em;
+}
+
+.card_5sensi_light{
+	background-color: $primary-color;
+}
+
+.card_5sensi_dark{
+	background-color: $back-color;
 }
 
 .site-footer .love .icon {
 	font-size: 12px;
 	margin-left: 2px;
 	margin-right: 2px;
+}
+
+.footer_5sensi{
+	background-color: $primary-color;
+	margin: 1.5em auto;
+	padding: 1.5em auto;
 }

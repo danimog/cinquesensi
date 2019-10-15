@@ -1,4 +1,6 @@
 - name: Home
   link: /
-- name: Chi siamo
-  link: /chisiamo.html
+- name: Prodotti
+  link: /prodotti.html
+- name: Contatti
+  link: /contatti.html
