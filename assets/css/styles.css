@@ -1,0 +1,43 @@
+body {
+  font: 100% "Encode Sans Condensed", sans-serif; }
+
+.cinque-sensi-logo {
+  background-color: #52361E;
+  border-bottom: #F7F5F0; }
+
+.logo-img {
+  margin: 1.5em auto; }
+
+.bg-custom {
+  background-color: #52361E;
+  color: #F7F5F0; }
+
+.navbar-toggler-icon {
+  border-color: #F7F5F0;
+  color: #F7F5F0; }
+
+.nav-link nav-item {
+  color: #F7F5F0; }
+  .nav-link nav-item:hover {
+    background-color: #F7F5F0;
+    color: #52361E; }
+
+.spot_5sensi {
+  background-color: #F7F5F0;
+  margin-top: 1.5em; }
+
+.card_5sensi_light {
+  background-color: #F7F5F0; }
+
+.card_5sensi_dark {
+  background-color: #52361E; }
+
+.site-footer .love .icon {
+  font-size: 12px;
+  margin-left: 2px;
+  margin-right: 2px; }
+
+.footer_5sensi {
+  background-color: #F7F5F0;
+  margin: 1.5em auto;
+  padding: 1.5em auto; }
