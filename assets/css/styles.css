@@ -1,6 +1,16 @@
 body {
   font: 100% "Encode Sans Condensed", sans-serif; }
 
+.navbar-nav {
+  float: none;
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+
+.navbar-nav > li {
+  display: inline-block;
+  float: none; }
+
 .cinque-sensi-logo {
   background-color: #52361E;
   border-bottom: #F7F5F0; }
@@ -21,6 +31,14 @@ body {
   .nav-link nav-item:hover {
     background-color: #F7F5F0;
     color: #52361E; }
+
+.notizie-back {
+  background-color: #F7F5F0;
+  margin-top: 1em; }
+
+.notizie-card {
+  margin: 1.5em auto;
+  padding: 1.5em auto; }
 
 .spot_5sensi {
   background-color: #F7F5F0;
