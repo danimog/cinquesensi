@@ -32,6 +32,12 @@ body {
     background-color: #F7F5F0;
     color: #52361E; }
 
+.caption-cinque-sensi {
+  background-color: rgba(245, 245, 245, 0.6);
+  color: #52361E;
+  top: 75%;
+  transform: translateY(-25%); }
+
 .notizie-back {
   background-color: #F7F5F0;
   margin-top: 1em; }
@@ -44,11 +50,18 @@ body {
   background-color: #F7F5F0;
   margin-top: 1.5em; }
 
+.tripadvisor {
+  margin: 1em auto; }
+
 .card_5sensi_light {
   background-color: #F7F5F0; }
 
 .card_5sensi_dark {
   background-color: #52361E; }
+
+.fb-root {
+  background-color: #F7F5F0;
+  border-top: 1px solid #back-color; }
 
 .site-footer .love .icon {
   font-size: 12px;
