@@ -1,6 +1,9 @@
 body {
   font: 100% "Encode Sans Condensed", sans-serif; }
 
+.card {
+  border: none; }
+
 .navbar-nav {
   float: none;
   margin: 0 auto;
