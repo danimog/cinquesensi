@@ -28,9 +28,12 @@
   <body>
     
     <div class="container-fluid text-center">
-      <div class="cinque-sensi-logo">
+      
+<div class="cinque-sensi-logo">
 	<a href="/cinquesensi/">
-		<img src="/cinquesensi/assets/images/cinque-sensi_logo400x270.png" width="210" height="142" class="d-inline-block logo-img" alt="Cinque Sensi Vernazza Cinque Terre logo">
+		<!--img src="/cinquesensi/assets/images/cinque-sensi_logo400x270.png" width="210" height="142" class="d-inline-block logo-img" alt="Cinque Sensi Vernazza Cinque Terre logo"-->
+
+		<img src="/cinquesensi/assets/images/head_1920x230.png" class="img-fluid logo-img" alt="Cinque Sensi Vernazza Cinque Terre logo">
 	</a>
 
 	<hr>
@@ -72,10 +75,11 @@
 		</div>
 	</nav>
 </div>
+
     </div> 
 
     <div class="container-fluid text-center">
-      <div id="carousel5sensi" class="carousel slide" data-ride="carousel">
+      <div id="carousel5sensi" class="carousel slide carousel-fade" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carousel5sensi" data-slide-to="0" class="active"></li>
     <li data-target="#carousel5sensi" data-slide-to="1"></li>
@@ -172,110 +176,306 @@
     </div> 
 
     <div class="container-fluid text-center">
-      <!--
-<div class="container-fluid text-center notizie-back">
-	
-	<div class="row">
-	
-		
-				<div class="col-sm-4">
-		  			<div class="card notizie-card">
-						<div class="card-body">
-							<h5 class="card-title">Contact Us</h5>
-							<h6 class="card-subtitle mb-2 text-muted">16 Oct 2019 - admin</h6>
-							<p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div style="margin: 4em auto;">
+<h3>Dove ci trovi</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
 
-</p>
-							<a href="/cinquesensi/2019/10/16/contact-us.html" class="card-link">Read more</a>
-						</div>
-					</div>
-				</div>
-		
-				<div class="col-sm-4">
-		  			<div class="card notizie-card">
-						<div class="card-body">
-							<h5 class="card-title">Winetasting</h5>
-							<h6 class="card-subtitle mb-2 text-muted">15 Oct 2019 - admin</h6>
-							<p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <script>
+		// Initialize and add the map
+		function initMap() {
+		  
+        var styledMapType = new google.maps.StyledMapType(
+[
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#523735"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#c9b2a6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#dcd2be"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ae9e90"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4f331a"
+      },
+      {
+        "lightness": 15
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#93817c"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffeb3b"
+      },
+      {
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#a5b076"
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#447530"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f8c967"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#e9bc62"
+      },
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#db8555"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#806b63"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.rail",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#F1E7D1"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#92998d"
+      }
+    ]
+  }
+],
+            {name: 'Styled Map'});
 
-</p>
-							<a href="/cinquesensi/2019/10/15/winetasting.html" class="card-link">Read more</a>
-						</div>
-					</div>
-				</div>
-		
-				<div class="col-sm-4">
-		  			<div class="card notizie-card">
-						<div class="card-body">
-							<h5 class="card-title">Beers And Spirits</h5>
-							<h6 class="card-subtitle mb-2 text-muted">14 Oct 2019 - admin</h6>
-							<p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        // Create a map object, and include the MapTypeId to add
+        // to the map type control.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 44.1353114, lng: 9.684806},
+          zoom: 12,
+          disableDefaultUI: true,
+        });
 
-</p>
-							<a href="/cinquesensi/2019/10/14/beers-and-spirits.html" class="card-link">Read more</a>
-						</div>
-					</div>
-				</div>
-		
-				<div class="col-sm-4">
-		  			<div class="card notizie-card">
-						<div class="card-body">
-							<h5 class="card-title">Pestoclass</h5>
-							<h6 class="card-subtitle mb-2 text-muted">12 Oct 2019 - admin</h6>
-							<p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        //Associate the styled map with the MapTypeId and set it to display.
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
 
-</p>
-							<a href="/cinquesensi/2019/10/12/pestoclass.html" class="card-link">Read more</a>
-						</div>
-					</div>
-				</div>
-		
-				<div class="col-sm-4">
-		  			<div class="card notizie-card">
-						<div class="card-body">
-							<h5 class="card-title">Experience</h5>
-							<h6 class="card-subtitle mb-2 text-muted">11 Oct 2019 - admin</h6>
-							<p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-</p>
-							<a href="/cinquesensi/2019/10/11/experience.html" class="card-link">Read more</a>
-						</div>
-					</div>
-				</div>
-		
-				<div class="col-sm-4">
-		  			<div class="card notizie-card">
-						<div class="card-body">
-							<h5 class="card-title">Benvenuto</h5>
-							<h6 class="card-subtitle mb-2 text-muted">10 Oct 2019 - admin</h6>
-							<p class="card-text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		  var cinquesensi = {lat: 44.1353114, lng: 9.684806};
+		  var marker = new google.maps.Marker({position: cinquesensi, map: map, animation: google.maps.Animation.DROP});
+			
+			google.maps.event.addListener(marker, 'click', function() {
+    			window.open('https://www.google.com/maps/place/Vernazza+Cinque+Sensi/@44.1352857,9.6844023,19z/data=!3m1!4b1!4m5!3m4!1s0x12d4f19f32eb566d:0x5d241791259dc0f6!8m2!3d44.1352847!4d9.6849495', '_blank')
+			});
 
-</p>
-							<a href="/cinquesensi/2019/10/10/benvenuto.html" class="card-link">Read more</a>
-						</div>
-					</div>
-				</div>
-		
-		
-	</div>
+		}
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgFke2TgkY7vFXRUmyh0y-IUJiaT7G340&callback=initMap">
+</script>
 
 </div>
--->
     </div>
 
-    <div class="container">
-      <div class="tripadvisor">
-	<img src="/cinquesensi/assets/images/ta_logo.png" class="img-fluid" style="margin-bottom: 2em auto;">
-
-	<h3><strong>Serata perfetta</strong></h3>
-	<p>
-		Siamo entrati attratti dalla bellezza del locale, caldo, accogliente e promettente. Il tris di vini scelti per la nostra degustazione era eccezionale, il tutto accompagnato da taglieri di salumi e formaggi, torta di verdure tipica e focaccia fresca fatta dal proprietario
-	</p>
-	<a target="_blank" href="https://www.tripadvisor.it/Attraction_Review-g187822-d17620821-Reviews-Vernazza_Cinque_Sensi-Vernazza_Cinque_Terre_Italian_Riviera_Liguria.html">read more..</a>
-</div>
-    </div>
-
-    <div class="container-fluid text-center">
+    <!--div class="container-fluid text-center">
       
 <div class="fb-root" style="margin:1.5em auto; border-top: 1px solid #ddd;"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v4.0"></script>
@@ -283,7 +483,7 @@
 <div class="fb-page" data-href="https://www.facebook.com/Vernazza-Cinque-Sensi-2720484918024473/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Vernazza-Cinque-Sensi-2720484918024473/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Vernazza-Cinque-Sensi-2720484918024473/">Vernazza Cinque Sensi</a></blockquote></div>
 
 
-    </div> 
+    </div--> 
 
     <div class="container-fluid">
       <footer class="footer_5sensi">
