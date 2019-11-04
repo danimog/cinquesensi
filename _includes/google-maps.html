@@ -1,0 +1,297 @@
+<div style="margin: 4em auto;">
+<h3>Dove ci trovi</h3>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <script>
+		// Initialize and add the map
+		function initMap() {
+		  
+        var styledMapType = new google.maps.StyledMapType(
+[
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ebe3cd"
+      }
+    ]
+  },
+  {
+    "elementType": "labels",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#523735"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#c9b2a6"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#dcd2be"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#ae9e90"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.neighborhood",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#4f331a"
+      },
+      {
+        "lightness": 15
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#93817c"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffeb3b"
+      },
+      {
+        "weight": 1
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#a5b076"
+      },
+      {
+        "visibility": "simplified"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#447530"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f1e6"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f8c967"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#e9bc62"
+      },
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway.controlled_access",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      {
+        "color": "#db8555"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#806b63"
+      }
+    ]
+  },
+  {
+    "featureType": "transit",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.rail",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dfd2ae"
+      },
+      {
+        "visibility": "on"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#F1E7D1"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#92998d"
+      }
+    ]
+  }
+],
+            {name: 'Styled Map'});
+
+        // Create a map object, and include the MapTypeId to add
+        // to the map type control.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 44.1353114, lng: 9.684806},
+          zoom: 12,
+          disableDefaultUI: true,
+        });
+
+        //Associate the styled map with the MapTypeId and set it to display.
+        map.mapTypes.set('styled_map', styledMapType);
+        map.setMapTypeId('styled_map');
+
+
+		  var cinquesensi = {lat: 44.1353114, lng: 9.684806};
+		  var marker = new google.maps.Marker({position: cinquesensi, map: map, animation: google.maps.Animation.DROP});
+			
+			google.maps.event.addListener(marker, 'click', function() {
+    			window.open('https://www.google.com/maps/place/Vernazza+Cinque+Sensi/@44.1352857,9.6844023,19z/data=!3m1!4b1!4m5!3m4!1s0x12d4f19f32eb566d:0x5d241791259dc0f6!8m2!3d44.1352847!4d9.6849495', '_blank')
+			});
+
+		}
+
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgFke2TgkY7vFXRUmyh0y-IUJiaT7G340&callback=initMap">
+</script>
+
+</div>

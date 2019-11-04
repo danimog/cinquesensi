@@ -1,0 +1,40 @@
+<div class="product">
+
+<!--
+  <a class="product" href="{{ site.baseurl }}{{ product.url }}">
+    <img src="{{ site.baseurl }}/{{ product.image }}" alt="{{ product.name }}" class="img-thumbnail" />
+    <p>{{ product.name }}</p>
+  </a>
+
+  <button class="snipcart-add-item"
+    data-item-name="{{ product.name }}"
+    data-item-id="{{ product.sku }}"
+    data-item-image="{{ site.baseurl }}{{ product.image }}"
+    data-item-url="{{ site.baseurl }}"
+    data-item-price="{{ product.price }}">
+    Compra ora a {{ product.price }} €
+  </button>
+-->
+
+	<div class="card-group">
+		<div class="card" style="max-width: 250px;">
+			<a class="product" href="{{ site.baseurl }}{{ product.url }}">
+				<img src="{{ site.baseurl }}/{{ product.image }}" alt="{{ product.name }}" class="img-thumbnail" />
+			</a>
+			<div class="card-body">
+				<h5 class="card-title">{{ product.name }}</h5>
+				<p class="card-text">
+					<button class="snipcart-add-item"
+					    data-item-name="{{ product.name }}"
+					    data-item-id="{{ product.sku }}"
+					    data-item-image="{{ site.baseurl }}{{ product.image }}"
+					    data-item-url="{{ site.baseurl }}"
+					    data-item-price="{{ product.price }}">
+					    Compra ora a {{ product.price }} €
+		  			</button>
+	  			</p>
+	<!--p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p-->
+	    	</div>
+	  	</div>
+	</div>
+</div>

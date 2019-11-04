@@ -1,5 +1,7 @@
 - name: Home
   link: /
+- name: Home 2
+  link: /home2.html
 - name: Prodotti
   link: /prodotti.html
 - name: Contatti

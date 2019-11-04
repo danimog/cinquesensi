@@ -7,6 +7,22 @@ body {
   font: 100% $font-stack;
 }
 
+.card{
+	border: none;
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+
 .cinque-sensi-logo{
 	background-color: $back-color;
 	border-bottom: $primary-color;
@@ -35,9 +51,31 @@ body {
 	}
 }
 
+.caption-cinque-sensi{
+	background-color: rgba(245, 245, 245, 0.6);
+	color: $back-color;
+	top: 45%; 
+	transform: translateY(-15%);
+
+}
+
+.notizie-back{
+	background-color: $primary-color;
+	margin-top: 1em;
+}
+
+.notizie-card{
+	margin: 1.5em auto;
+	padding: 1.5em auto;
+}
+
 .spot_5sensi{
 	background-color: $primary-color;
 	margin-top: 1.5em;
+}
+
+.tripadvisor{
+	margin: 1em auto;
 }
 
 .card_5sensi_light{
@@ -46,6 +84,16 @@ body {
 
 .card_5sensi_dark{
 	background-color: $back-color;
+}
+
+ #map {
+        height: 450px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+
+.fb-root{
+	background-color: $primary-color;
+	border-top: 1px solid #back-color;
 }
 
 .site-footer .love .icon {
